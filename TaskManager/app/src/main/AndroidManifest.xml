@@ -19,9 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AllApps">
-        </activity>
+        <activity android:name=".AllAppsActivity"></activity>
+        <activity android:name=".AppsActivity"></activity>
+        <activity android:name=".SystemAppsActivity"></activity>
     </application>
 
 </manifest>
