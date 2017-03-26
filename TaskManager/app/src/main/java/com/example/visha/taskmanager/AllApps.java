@@ -25,7 +25,9 @@ public class AllApps extends Activity{
 
         for (int i = 0; i < recentTasks.size(); i++)
         {
+            System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
             Log.d("Executed app", "Application executed : " +recentTasks.get(i).baseActivity.toShortString()+ "\t\t ID: "+recentTasks.get(i).id+"");
+            System.out.println("*********************************************");
         }
 //        ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
 //        ActivityManager.MemoryInfo info = new ActivityManager.MemoryInfo();
