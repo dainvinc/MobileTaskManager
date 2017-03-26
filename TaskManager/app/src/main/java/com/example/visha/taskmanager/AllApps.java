@@ -2,6 +2,7 @@ package com.example.visha.taskmanager;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -21,13 +22,14 @@ public class AllApps extends Activity{
         setContentView(R.layout.all_apps);
 
         final ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-        final List<ActivityManager.RunningTaskInfo> recentTasks = activityManager.getRunningTasks(Integer.MAX_VALUE);
+        final List<ActivityManager.RunningAppProcessInfo> recentTasks = activityManager.getRunningAppProcesses();
 
         for (int i = 0; i < recentTasks.size(); i++)
         {
             System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-            Log.d("Executed app", "Application executed : " +recentTasks.get(i).baseActivity.toShortString()+ "\t\t ID: "+recentTasks.get(i).id+"");
+            Log.d("Executed app", "Application executed : " +recentTasks+ "\t\t ID: "+recentTasks.get(i)+"");
             System.out.println("*********************************************");
+            new AlertDialog.Builder(AllApps.this).setMessage(recentTasks.toString()).show();
         }
 //        ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
 //        ActivityManager.MemoryInfo info = new ActivityManager.MemoryInfo();
