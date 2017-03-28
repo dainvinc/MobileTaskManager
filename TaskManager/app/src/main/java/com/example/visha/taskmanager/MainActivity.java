@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         systemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent systemScreen = new Intent(MainActivity.this, SystemAppsActivity.class);
+                Intent systemScreen = new Intent(MainActivity.this, TestActivity.class);
                 startActivity(systemScreen);
             }
         });
